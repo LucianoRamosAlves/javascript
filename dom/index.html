@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: linear-gradient( 45deg ,red,blue);
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+    h1{
+        color: aliceblue;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+    }
+    p{
+        font: normal 1.5em arial;
+        color: antiquewhite;
+    }
+</style>
+<body>
+    <h1>estudos de DOM</h1>
+    <p><i>resultados</i></p>
+    <p class="p2"> aprendendo...</p>
+    <div id="blue">
+        por id
+    </div>
+
+</body>
+<script>
+   //document.write(window.document.charset) // pode mostras mais documentos,url
+   //alert(document.URL)
+   var p1 = window.document.getElementsByTagName('p')[0]
+     window.document.write(p1.innerText) // ou innerHTML para vim com a formatacao i nesse caso
+
+        //cuidado tem 2 tipos de document,window,usar o do icone branco
+     //innertext é o texto nesse caso que está dentro de p1, aparece só o texto
+     //sem as tags de estilizaçao como mark,strong,etc.. o innerHTML pega suas filhas tambem
+
+     p1.style.color= 'yellow'//pode mudar a cor de todos os elementos
+    //var corpo = window.document.body // cria uma variavel para o body
+    //corpo.style.background='blue' //pode mudar a cor do body tambem
+
+    var blue= window.document.getElementById('blue')
+    // o mesmo para get.....class
+    blue.style.background='blue'
+    blue.innerText='mudanças..'// o texto original ,como vc pode ver em div, é por id
+    //mas modifiquei o texto aqui
+    blue.style.fontSize='2em'
+    blue.style.textAlign='center'
+
+    var p2= document.querySelector('p.p2')
+    // seleciona colocando  só a tag ou tag.class ou tag#id,metodo mais atualizado
+    p2.style.color='red'
+</script>
+</html>
