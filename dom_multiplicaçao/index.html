@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(45deg,#054A91,#DBE4EE);
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        /*#054A91
+        #3E7CB1
+        #81A4CD
+        #DBE4EE
+        #F17300*/
+        h1{
+            text-align: center;
+            font-size: 1.9em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        span{
+            font-size: 1.2em;
+            color: #F17300;
+        }
+        #text1,#text2{
+            padding: 10px;
+            width: 100px;
+            margin: 20px;
+            border-radius: 10px;
+            border: 1px solid  #DBE4EE;
+            
+        }
+        #botao{
+            color: aliceblue;
+            background:#F17300;
+            font-size: 1.2em;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        #botao:hover{
+            animation: an  0.6s infinite alternate ease-in;
+            cursor: pointer;
+        }
+        #res{
+            background-color:#DBE4EE ;
+            width: 80%;
+            height: 200px;
+            text-align: center;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.519);
+        }
+        @keyframes an{
+            0%{
+               transform: scale(1.0); 
+            }
+            100%{
+                transform: scale(1.1);
+            }
+        }
+        strong{
+            display: block;
+            color: #F17300;
+            margin-left: 2%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>multiplicando valores</h1>
+    <form action="php">
+        <input type="number" name="text1" id="text1"> <span> * </span>
+        <input type="number" name="text2" id="text2">
+        <input type="button"  id="botao" value="multiplicar" onclick="multiplicar()"> <!--quando clicar nesse botao vai aparecer a soma
+        por isso o eveento vai aqui -->
+    </form>
+    <div id="res"> resultado</div>
+</body>
+<script>
+    function multiplicar() {
+        var tn1 = document.getElementById('text1')// passei os valores do text1 para tn1
+        var tn2 = document.getElementById('text2')// passei os valores do text2 para tn2
+        var s = document.getElementById('res')// passei os valores da div res para o s, entao valor de s vai ser exibido na div res
+        var n1 = Number(tn1.value)// usei o number pois tenho que indentificar como number, se nao fica string
+        // resumindo falei que tn1 é number e joguei essa informação para o var n1
+        var n2 = Number(tn2.value)
+        var s = n1 * n2
+        res.innerHTML= `A multiplicação entre ${n1} e ${n2} é igual a  <br><strong>${s}</strong>`// innerText é receber texto, vai receber o valor de s
+        s.style.color='red'
+    }
+</script>
+</html>

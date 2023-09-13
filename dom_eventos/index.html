@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos</title>
+    <style>
+        div.espaço{
+            background: rgba(198, 182, 8, 0.6);
+            color: rgb(255, 255, 255);
+            height: 200px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.345);
+            transform: scale(1.1);
+            font-size: 2em;
+            margin: auto;
+            padding-top: 50vh;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+ <div class="espaço" >  <!-- onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> !-->
+        interaja
+
+    </div>
+    
+</body>
+<script>
+    /*function clicar(){
+        var espaço= document.querySelector('div.espaço')
+        espaço.innerText='clicou!'
+       espaço.style.background='red'
+    }
+    function entrar(){
+        var espaço= document.querySelector('div.espaço')
+        espaço.innerText='entrou'
+        espaço.style.background='green'  
+    }
+
+    function sair() {
+        var espaço=window.document.querySelector('div.espaço')
+        espaço.innerText='saiu'
+        espaço.style.background='rgba(198, 182, 8, 0.6)'
+
+    }*/
+    //////////////ou////////////////////////////
+    var espaço= window.document.querySelector('div.espaço')
+    espaço.addEventListener('click',clicar)
+    espaço.addEventListener('mouseenter',entrar)
+    espaço.addEventListener('mouseout',sair)
+
+    function clicar(){
+        espaço.innerText='clicou!'
+       espaço.style.background='red'   
+    }
+    function entrar(){
+        espaço.innerText='entrou'
+        espaço.style.background='green'  
+    }
+
+    function sair() {
+        espaço.innerText='saiu'
+        espaço.style.background='rgba(198, 182, 8, 0.6)'
+
+    }
+
+    </script>
+</html>
