@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>texte de velocidade</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+           background: linear-gradient(45deg, #252323,#A99985,#DAD2BC,#ffffff);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            background-size: 300%;
+            animation: an 10s infinite alternate;
+        }
+        @keyframes an{
+            0%{
+              background-position: 0% 50%;  
+            }
+            50%{
+               background-position: 50% 100%;
+            }
+            100%{
+                background-position: 0% 50%;
+            }
+        }
+        h1{
+            padding: 30px;
+            font-size: 4em;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .placa{
+            background-color: rgb(254, 255, 251);
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 10px solid #ff5e01;
+            margin-bottom: 30px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.484);
+        }
+        span.nume{
+            font-size: 4.5em;
+        }
+        span.v{
+            font-size: 2em;
+        }
+        #text1{
+            padding: 10px;
+            width: 30%;
+            border: 1px solid #C44900;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.484);
+        }
+        #botao{
+            padding: 5px;
+            margin-top: 20px;
+            background-color: #C44900;
+            color: aliceblue;
+            font-size: 1.5em;
+            border-radius: 10px;
+            border: 1px solid rgb(0, 0, 0);
+            transition: 0.6s ease;
+        }
+        #botao:hover{
+            cursor: pointer;
+            animation: bt 1s infinite alternate;
+            background-color: #8a3300;
+        }
+        @keyframes bt{
+            from{
+                transform: scale(1.1);
+            }
+        }
+        .res,.det{
+            padding: 10px;
+            text-align: center;
+            font-size: 1.3em;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        strong{
+            font-size: 1.2em;
+            margin-left: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1> verificador</h1>
+    <div class="placa"><span class="nume"> 50</span> <span class="v">km/h</span></div>
+    <input type="number" id="text1" placeholder="em km/h">
+    <input type="button" value="verificar" id="botao" onclick="verificar()">
+    <div class="res"> situação</div>
+    <div class="det"> detalhes</div>
+</body>
+<script>
+    function verificar() {
+        var tn1 = document.getElementById('text1')
+        var vel = Number(tn1.value)
+        var r = document.querySelector('div.res')
+        var d = document.querySelector('div.det')
+        r.innerHTML=` sua velocidade é <strong> ${vel} kh/h</strong> <br>` 
+        if(vel > 50){
+            d.innerHTML= 'EXCESSO DE VELOCIDADE, MULTADO! <br>'
+            d.innerHTML+="  <br>ATENÇÃO NA PISTA, USE O CINTO DE SEGURANÇA!"
+            d.style.color='#fff'
+            d.style.background='#C44900'
+        }
+        else{
+            d.innerHTML="CONTINUE SEGUINDO AS NORMAS DE TRANSITO! <br>"
+            d.innerHTML+=" <br> ATENÇÃO NA PISTA, USE O CINTO DE SEGURANÇA!"
+            d.style.color='#fff'
+            d.style.background='#618B25'
+
+        }
+    }
+</script>
+</html>
