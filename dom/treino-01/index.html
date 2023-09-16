@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>treino 1</title>
+    <style>
+        #click{
+            font-size: 2em;
+            height: 300px;
+            width: 300px;
+            line-height: 300px;
+            background-color: rgb(255, 255, 0);
+            text-align: center;
+            transform: translate(50%, 50%);
+            border-radius: 30%;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.559);
+            text-transform: uppercase;
+            text-shadow: 1px 1px 3px white;
+        }
+        input{
+            padding: 5px;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="text1"> - <input type="number"  id="text2">
+    <div id="click" onclick="clicar()" onmousemove="mover()" onmouseout="sair()" onmousedown="down()" onmouseover="over()"> interaja</div>
+</body>
+<script>
+    function clicar(){
+        var t1 = document.getElementById('text1')
+        var t2 = document.getElementById('text2')
+        var n1 =(t1.value)
+        var n2 =(t2.value)
+        var r = n1 - n2
+        var clicar = document.querySelector('div#click')
+        clicar.style.color='#fff'   
+        clicar.style.background='red' 
+        clicar.innerText=` clicou ${r}`
+        if( r >= 0){
+            clicar.innerText+=`¥`
+        }
+        else{
+            clicar.innerText+='¤' 
+        }
+        
+    }
+    function mover(){
+        var clicar = document.querySelector('div#click')
+        clicar.style.background='green' 
+        clicar.innerText='entrou'  
+    }
+    function sair(){
+        var clicar = document.querySelector('div#click')
+        clicar.style.background='orange' 
+        clicar.innerText='saiu' 
+    } 
+    function down(){
+        var clicar = document.querySelector('div#click')
+        clicar.style.background='black' 
+        clicar.innerText='click'  
+    } 
+
+</script>
+</html>
