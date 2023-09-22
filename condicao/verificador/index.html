@@ -115,6 +115,25 @@
             d.style.color='#fff'
             d.style.background='#C44900'
         }
+        else if(vel >= 47  ){
+            d.innerHTML= 'CUIDADO, REDUZA A VELOCIDADE ! <br>'
+            d.innerHTML+="  <br>ATENÇÃO NA PISTA, USE O CINTO DE SEGURANÇA!"
+            d.style.color='#fff'
+            d.style.background='#c4b700'
+        }
+        else if(vel < 0){
+            d.innerHTML= 'VELOCIDADE NÃO RECONHECIDA ! <br>'
+            d.innerHTML+="  <br> POR FAVOR, DIGITE UMA VELOCIDADE VALIDA"
+            d.style.color='#fff'
+            d.style.background='black' 
+            r.innerHTML=` sua velocidade é <strong> INVALIDA </strong> <br>` 
+        }
+        else if(vel == 0){
+            d.innerHTML= 'VEÍCULO PARADO! <br>'
+            d.innerHTML+="  <br> PRECISA DE AJUDA ?  <strong>LIQUE 190 </strong>"
+            d.style.color='black'
+            d.style.background='#fff' 
+        }
         else{
             d.innerHTML="CONTINUE SEGUINDO AS NORMAS DE TRANSITO! <br>"
             d.innerHTML+=" <br> ATENÇÃO NA PISTA, USE O CINTO DE SEGURANÇA!"

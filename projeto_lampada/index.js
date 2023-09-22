@@ -1,3 +1,5 @@
+" use strict"
+
 function ligar(){
     var ligar = document.querySelector('div.ligar')
     var deligar = document.querySelector('div.desligar')
