@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <header><h1>calcule<mark>#</mark>sua<mark>#</mark>area</h1></header>
+    <nav>
+      <ul>
+        <li>
+          <a href=""
+            ><span class="material-symbols-outlined" id="c"> app_badging </span></a
+          >
+        </li>
+        <li>
+          <a href="" class="q"><span class="material-symbols-outlined" id="q"> ripples </span></a>
+        </li>
+        <li>
+          <a href=""><span class="material-symbols-outlined" id="t"> tornado </span></a>
+        </li>
+        <li>
+          <a href=""><span class="material-symbols-outlined" id="r" > rectangle </span></a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section class="retangulo">
+        <h2>calcule sua area retangulo</h2>
+        <p>
+          <span class="texto"> formula=</span> <span .class="formula"> base x altura</span>
+        </p>
+        <input type="number" placeholder="digite valor base" id="nr1">
+        <input type="number" placeholder="digite valor altura" id="nr2">
+        <input type="button" value="verificar" onclick="r()">
+        <div class='rretangulo'>resultado</div>
+      </section>
+      <section class="quadrado">
+        <h2>calcule sua area quadrado</h2>
+        <p>
+          <span class="texto"> formula =</span> <span .class="formula"> lado <sup>2</sup></span>
+        </p>
+      </section>
+      <section class="triangulo">
+        <h2>calcule sua area triangulo</h2>
+        <p>
+          <span .class="texto"> formula=</span> <span .class="formula">(base x altura)/2</span>
+        </p>
+      </section>
+      <section class="circulo">
+        <h2>calcule sua area circulo</h2>
+        <p>
+          <span class="texto"> formula=</span> <span .class="formula"> &#960;  r <sup>2</sup></span>
+        </p>
+      </section>
+    </main>
+  </body>
+  <script src="index.js"></script>
+</html>
