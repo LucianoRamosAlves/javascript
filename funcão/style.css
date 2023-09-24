@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 a{
     text-decoration: none;
 }
@@ -24,8 +27,9 @@ header{
 }
 nav{
    background-color: var(--cor2);
-   width: 100%;
    padding:1px 0;
+   position: sticky;
+   top: 0px;
 }
  nav a{
     width:90% ;
@@ -84,30 +88,82 @@ main{
     padding: 10px;
     background-color: var(--cor5);
 }
-.retangulo{
+.retangulo, .circulo, .quadrado, .triangulo{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 50vh;
     justify-content: center;
     align-items: center;
     padding: 10px;
+    height: 95vh;
 }
-.rretangulo{
-    background-color: var(--cor5);
-    width: 70vh;
-    height: 20vh;
+.rretangulo, .rquadrado, .rtriangulo, .rcirculo{
+    background-color: white;
+    width: 80%;
     border-radius: 10px;
-    color: var(--cor4);
+    color: var(--cor3);
     text-align: center;
     font-size: 1.6em;
     text-transform: uppercase;
+    line-height: 5vh;
+    padding: 10px;
+}
+
+.retangulo h2, .circulo h2, .quadrado h2, .triangulo h2{
+    background-color: #FDCA40;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    color: #fefffe;
     letter-spacing: 0.2em;
-    line-height: 15vh;
+    border-radius: 5px;
+}
+.retangulo p, .circulo p, .quadrado p, .triangulo p{
+    margin: 20px 0px;
+}
+.formula{
+    color: #DF2935;
+    font-size: 1.2em;
+    letter-spacing: 0.2em;
+}
+.texto{
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+.digite1,.digite2{
+    color: var(--cor2);
 }
 input{
     padding:10px;
-    max-width: 30%;
+    width: 30%;
     margin: 10px 0px;
 }
-
+strong{
+    color: #000;
+    letter-spacing: 0.2em;
+}
+.botao{
+    padding: 10px;
+    margin: 20px 0 ;
+    width: 40%;
+    border-radius: 5px;
+    font-size: 1.2em;
+    background-color:var(--cor4);
+    color: var(--cor1);
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+}
+.botao:hover{
+    background-color: #dca100;
+}
+@media (min-width:100px){
+    body{
+        background-color: #080708;
+    }
+}
+footer{
+    color: var(--cor4);
+    padding: 20px;
+    font-size: 1.2em;
+}

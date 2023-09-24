@@ -1,0 +1,14 @@
+header{
+    font-size:10px;
+    padding: 20px 0px;
+}
+input{
+    width: 30%;
+}
+::placeholder{
+
+    visibility: hidden;
+}
+.botao{
+    width:60%;
+}
