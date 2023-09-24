@@ -82,6 +82,7 @@ mark{
 }
 main{
     padding: 10px;
+    background-color: var(--cor5);
 }
 .retangulo{
     display: flex;
