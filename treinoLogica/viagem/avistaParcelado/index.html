@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>treino</title>
+</head>
+<body>
+    <h1>finalização da compra</h1>
+    <h2> prommoção 10% de desconto a vista</h2>
+    <p>escolha a modalidade de pagamento</p>
+    <p> total da conta</p>
+    <input type="number" id="conta">
+    <input type="button" id="vista" value="Á vista" onclick="vista()">
+    <div> quantidades de parcela</div>
+    <input type="number" id="quant">
+    <input type="button" id="parcelado" value="parcelado" onclick="parc()">
+</body>
+<script>
+    function avista(){
+        var c = document.querySelector("#conta").value 
+        conta = parseFloat(c)
+        let avista = (conta * 0.10) - conta
+        return ` valor a vista : R$ ${Math.abs(avista).toFixed(2)}`
+    }
+    function parcelado(){
+        var c = document.querySelector("#conta").value
+        var quant = document.querySelector("#quant").value 
+        conta = parseFloat(c)
+        q = parseInt(quant)
+        let parcelado =  conta / q
+        return ` valor parcelado em ${q} vezes é: R$ ${parcelado.toFixed(2)}`
+        // com juros/ negativo
+    }
+    function vista(){
+        alert(avista())
+    }
+    function parc(){
+        alert(parcelado())
+    }
+</script>
+</html>

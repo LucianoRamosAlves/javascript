@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v</title>
+</head>
+<body>
+    <p> quantidade de clientes</p>
+    <input type="number" id="client" placeholder="cliente">
+    <p> total da conta</p>
+    <input type="number" id="conta" placeholder="conta">
+    <input type="button" id="verifique" value="verifique" onclick="verificar()">
+</body>
+<script> 
+function calcular(){
+let n1 = document.querySelector("#client").value
+let n2 = document.querySelector("#conta").value
+nclient = parseFloat(n1)
+tconta =parseFloat(n2)
+let p = tconta/nclient
+return  ` numeros de cliente: ${nclient}
+  total da conta: R$ ${tconta.toFixed(2)} 
+  preço por pessoa: R$ ${p.toFixed(2)}`
+  //if se abaixo de 1 , centatos
+  // 1 real
+  // acima de 1 reais
+
+}
+function verificar(){
+    alert(calcular());
+}
+</script>
+</html>
