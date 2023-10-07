@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>treino</title>
+</head>
+<body>
+    <h1>par ou impar ?</h1>
+    <p> digite um numero</p>
+    <input type="number"  id="innumber">
+    <input type="button" value="verifique" id="bv">
+    <h2 id="outres"></h2>
+</body>
+<script>
+    function verificar(){
+        let innumber = document.getElementById("innumber").value;
+        let outres = document.getElementById("outres");
+        numbe = parseFloat(innumber); 
+        if(numbe%2 ==  0){ // se dividir por 2 e der resto zero
+            outres.innerHTML =`o numero ${numbe} é par`
+            numbe.focus();
+        } else{
+            outres.innerHTML =`o numero ${numbe} é impar`
+        }
+    }
+    let bv = document.getElementById("bv");
+    bv.addEventListener("click", verificar);
+
+</script>
+</html>

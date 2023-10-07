@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>treino</title>
+</head>
+<body>
+    <h1>programa de saque</h1>
+    <div>
+        <span> valor do saque R$:</span>
+        <input type="number" name="" id="invalor">
+    </div>
+    <input type="button" value="exibir notas para saque" id="bs">
+    <h2 id="outnotacem"></h2>
+    <h2 id="outnotacinqueta"></h2>
+    <h2 id="outnotadez"></h2>
+</body>
+<script>
+    function calcular (){
+        let invalor = document.getElementById("invalor").value;
+        let outnotacem = document.getElementById("outnotacem");
+        let outnotacinqueta = document.getElementById("outnotacinqueta");
+        let outnotadez = document.getElementById("outnotadez");
+        valor = parseFloat(invalor);
+        outnotacem.innerHTML="";
+        outnotacinqueta.innerHTML="";
+        outnotadez.innerHTML="";
+        notacem = Math.floor(valor/100); // pego o valor e divido por 100 e sobra um resto
+        resto = valor % 100 // passo o resto do da conta acima para resto ;
+        notacinqueta = Math.floor(resto/50);// pego o resto e divido por 50
+        resto = valor % 50 ;// passo o resto do da conta acima para resto ;
+        notadez = Math.floor(resto/10);// pego o resto e divido por 10
+        resto = valor % 10 ; // passo o resto do da conta acima para resto ;
+        
+        if( invalor == 0 || isNaN(invalor) ){ // is nan verfica se é um numero...se nao for,execute esse if
+            alert("informe o valor do saque correctamente")
+            valor.innerHTML=""
+            valor.focus();
+            return ; 
+        }
+        if(invalor % 10 != 0 ){// o valor se tiver resto 10 na divisão desse resto tem q resultar em zero..se for entao esse numero é divisivel se for diferente de zero != então não é ..ex..vc fez toda a divisão e teve resto 11 ao fazer essa ultima divisão ..vai dar um outro resto diferente de zero entao esse numero nao é divivel ...gigamos que vc fez toda a conta...e sobrou resto 10...entao essa conta vai dar exata logo ele é multiplico..nesse caso de 10,50,ou 100
+            alert("valor invalido para notas disponiveis (R$: 10,50,100)")
+            valor.focus();
+            return ;  }
+        if (notacem > 0){
+            outnotacem.textContent = ` Notas de R$ 100: ${notacem}`
+        }
+        if (notacinqueta > 0){
+            outnotacinqueta.textContent = ` Notas de R$ 50: ${notacinqueta}`
+        }
+        if (notadez > 0){
+            outnotadez.textContent = ` Notas de R$ 10: ${notadez}`
+        }}
+ 
+    let bs = document.getElementById("bs")
+    bs.addEventListener("click", calcular)
+
+
+</script>
+</html>

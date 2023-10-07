@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tri[eino</title>
+</head>
+<body>
+    <h1>verificar velocidade</h1>
+    <p> velocidade permitida</p>
+    <input type="number" name="" id="invelper">
+    <p>velocidade do condutor</p>
+    <input type="number" name="" id="invelcond">
+    <input type="button" value="verificar" id="bres">
+    <h2 id="outres"></h2>
+</body>
+<script>
+    function verificar (){
+        let invelper = document.getElementById("invelper").value;
+        let invelcond = document.getElementById("invelcond").value;
+        let outres = document.getElementById("outres");
+        velper = parseFloat(invelper);
+        velcond = parseFloat(invelcond);
+        let val20 = (((velper / 2) * 0.2) * 2) + velper
+        let total = velcond - velper
+        if(velcond < velper){
+            outres.innerHTML="dentro da normalidade"
+            outres.style.color='green';
+        }
+        else if(velcond == velper){
+            outres.innerHTML="atenção"
+            outres.style.color='yellow';
+            return;
+    }
+    else if( velcond >= val20){
+        outres.innerHTML="multa pesada , vocÊ passou " + total  + "km/h a mais"
+            outres.style.color='red';
+            return;
+    }else{
+        outres.innerHTML="multa leve"
+            outres.style.color='blue';
+            return;
+    }
+
+
+    
+};
+    let bres = document.getElementById("bres");
+    bres.addEventListener("click", verificar);
+</script>
+</html>
