@@ -23,6 +23,8 @@ let produtos = [ "arroz",  "feijão" ,"peixe" ,"macarrão"]; // listagem de prod
 //* indexOf() busca um elemento no inicio até do vetor ex: console.log(produtos.indexOf(2)) retona peixe
 //* lastIndexOf() busca do final até o inicio ex: console.log(produtos.lastindexOf(2)) retona feijão
 //* math.random() gera um numero aleatorio
+//* sort() ordem alfabetica
+//* slice() faz uma copia do vetor
 */
 
 // preciso percorrer todos os elementos do vetor para isso posso usar o método for
@@ -58,7 +60,33 @@ posso criar uma função vender, para pega um carro da lista, remove e exibe ess
 3-- no item 5.. posso usar o atributo carros.shift().. mas .. let vendido = carros.shift().. pego o item removido e cologo na var vendidos
 4-- pego uma referencia de saida e exibo vendidos
 //? sõ aqui que muda o resto é igual 
-*/
+
+//! ------------function lista--------------
+mesma coisa de adicionar,  só que vai listando na tela, aqui tem que ter 2 inputs de entreda , item 5
+1-- no final da função adicionar , coloco essa função, lista(), para que todas as vezes que eu chamar a função ativar, chame a função lista e mostre os intem listado na tela
+2-- seguimos a mesma logica
+3-- crio um espaco para concatenar
+4-- crio o for for( let i= 0; i < carros.length; i++ ){
+     lista += carros[i].modelo + " " + carros[i].preco.tofixed(2); "\n"
+}
+5-- pego uma referencia de saida para mostra essa lista
+6-- crio fora da funçao reference botão
+
+//! ----------- function filtrar---------------
+1-- crio uma let ex; let maximo = number(prompt("qual valor maximo")), pode ser isso ou normal, pegando um imput de entrada.. epgando a referencia e depois igualar a let maximo
+2-- valida com if(maximo == 0 etc..)
+3-- uso um epsaco para concaternar
+4-- pecorro todos os elementos for( let i= 0; i < carros.length; i++ ){
+     { if( carros[i].preco <= maximo){lista += carros[i].modelo + " " + carros[i].preco.tofixed(2)}}
+5-- crio uma referencia de saida para essa lista
+6-- se fica fazio a lista, então não há carros com esse preço
+7-- if(lista == ""){
+     outlista.textcontent = "nao ha carros com o preco até" + maximo.toFixed(2) 
+}  se tiver carros com o preço else{
+ outlista.textcontent = " carros até" + maximo.toFixed(2) + "\n-------------------------------\n" + lista 
+}
+8-- fora da funçao criei um botão referencia
+
 
 
 
