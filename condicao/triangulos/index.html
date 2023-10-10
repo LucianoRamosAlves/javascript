@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>triangulos</h1>
+    <div>
+        <span>lado A:</span>
+        <input type="number" name="" id="inladoa">
+    </div>
+    <div>
+        <span>lado B:</span>
+        <input type="number" name="" id="inladob">
+    </div>
+    <div>
+        <span>lado C:</span>
+        <input type="number" name="" id="inladoc">
+    </div>
+    <input type="button" value="verificar" id="bver">
+    <div id="outres"></div>
+    
+</body>
+<script>
+ function calcular(){
+    let inladoa = document.getElementById("inladoa").value;
+    let inladob = document.getElementById("inladob").value;
+    let inladoc = document.getElementById("inladoc").value;
+    let outres = document.getElementById("outres");
+    ladoa = parseFloat(inladoa);
+    ladob = parseFloat(inladob);
+    ladoc = parseFloat(inladoc);
+    
+if((ladoa == ladob) || (ladoa ==ladoc) || (ladob ==ladoc)) {
+        outres.innerHTML ="isoseles";
+        return ;
+ }
+ else if((ladoa == ladob) && (ladoc == ladob)){
+    outres.innerHTML ="esquilatero";
+    return ;
+ }
+ else{
+    outres.innerHTML ="escalero";
+    return ;
+ }
+}
+
+    bver.addEventListener("click", calcular); 
+
+</script>
+</html>

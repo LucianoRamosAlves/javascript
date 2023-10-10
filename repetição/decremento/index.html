@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>decrescentes</h1>
+    <div>
+        <span>numero:</span>
+        <input type="number" name="" id="innur">
+    </div>
+    <button id="botao"> decrscer até 1</button>
+    <h3 id="outresultado"></h3>
+</body>
+<script>
+    function decrescentes() {
+        let innur = document.getElementById("innur").value;
+        let outresultado = document.getElementById("outresultado");
+        nur = parseFloat(innur);
+        let resposta = ` entre ${nur} e 1:`
+        if(nur == 0){
+            outresultado.innerHTML="digite um numero acima ou abaixo de zero"
+            outresultado.style.color="red"
+        }
+        for(let i = nur ; i > 0; i--){
+            resposta = `${ resposta} ${i} ,`
+            outresultado.innerHTML= resposta
+        }
+    }
+    botao.addEventListener("click",decrescentes);
+</script>
+</html>

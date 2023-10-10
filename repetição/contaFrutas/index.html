@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documen</title>
+</head>
+<body>
+    <h1>repete frutas</h1>
+    <div>
+        <span>frutas:</span>
+        <input type="text" id="infrutas" minlength="3" required>
+    </div>
+    <div>
+        <span>numeros:</span>
+        <input type="number" id="innumeros">
+    </div>
+    <input type="button" value="repitir fruta" id="brepitir">
+    <h2 id="outres"></h2>
+</body>
+<script>
+    function repitir(){
+        let frutas = document.getElementById("infrutas").value;
+        let innumeros = document.getElementById("innumeros").value;
+        let outres = document.getElementById("outres");
+        numeros = Number(innumeros);
+        if((frutas >= 0) || (frutas < 0) || (frutas == "")){
+            alert("digite uma fruta valida")
+        }
+        else if((numeros <= 0) || (numeros == "")){
+            alert('ops! digite um numero valido')
+        }
+
+        let resposta = ""
+
+        for(let i = 1; i <= numeros; i++) {
+            resposta += ` ${frutas} * `
+        }
+        outres.textContent = resposta
+
+        switch (frutas) {
+            case "banana":
+                outres.style.color="yellow"
+                break;
+                case "maçã":
+                outres.style.color="red"
+                break;
+                case "melão":
+                outres.style.color="green"
+                break;
+                case "uva":
+                outres.style.color="rgb(0, 13, 255)"
+                break;
+                case "laranja":
+                outres.style.color="orange"
+                break;
+            default:
+                outres.style.color="black"
+                break;
+        }
+    }
+    brepitir.addEventListener("click", repitir);
+</script>
+</html>

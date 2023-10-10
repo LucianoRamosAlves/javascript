@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>conta do mes</h1>
+    <div>
+        <span>descricao da conta:</span>
+        <input type="text" name="" id="indescricao">
+    </div>
+    <div>
+        <span>valor a pagar:</span>
+        <input type="number" name="" id="invalor">
+    </div>
+    <input type="button" value="registrar conta" id="bregistrar">
+    <pre id="outlinhas"></pre>
+    <pre id="outtotal"></pre>
+</body>
+<script> // contadores(conta a quatidades de itens) e acumuladors(soma todo)
+        let numcontas = 0 ;
+        let valtotal = 0 ;
+        let resposta = "";
+        /*   acumuladores e contadores , tem que ter uma epsacp , variavel pre definidos pra eles
+        e let resposta é pra guarda os valores do for//**/
+    function contas(){
+        let indescricao = document.getElementById("indescricao").value;
+        let invalor = document.getElementById("invalor").value;
+        let outlinhas = document.getElementById("outlinhas");
+        let outtotal = document.getElementById("outtotal");
+        valor = parseFloat(invalor);
+        outlinhas.innerHTML="";
+        outtotal.innerHTML="";
+        if((indescricao == "") || (valor == 0) || (isNaN(valor))){
+            alert('informe os dados correctamente')
+        }
+        numcontas++; // vai adicionando as contas, que nem em for...no i++
+        valtotal = valtotal + valor; // //na vatotal adiciona ela mesmo + o valor que é colocado para fazer a soma
+
+
+        // essa parte é padrao , intregar algo na respota para aparecer na pagina,lemre que resposta tem que receber reposta
+        resposta = `${resposta + indescricao } -R$: ${ valor.toFixed(2)}${"\n"}`
+
+        outlinhas.textContent = resposta + "------------------------" 
+        outtotal.textContent= numcontas + "contas(s) - total R$:" +  valtotal.toFixed(2)
+
+    }
+    bregistrar.addEventListener("click", contas);
+</script>
+</html>

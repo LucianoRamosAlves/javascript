@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>numeros primos</h1>
+    <div>
+        <span>numero:</span>
+        <input type="number" id="innumero">
+    </div>
+    <input type="button" value="verificar" id="verificar">
+    <div id="outresultado"></div>
+</body>
+<script>
+    function primos(){
+        let innumero = document.getElementById("innumero").value;
+        let outresultado = document.getElementById("outresultado");
+        numero = parseFloat(innumero);
+        if((numero == 0)|| isNaN(numero)){
+            alert(" numero Invalid")
+        }
+        // declaro e iniccializa variavel tipo flag
+        let temDivisor = 0
+        // 0 == false , 1 == true
+
+
+        // por que i comeca sendo 2 ? por que o conceito de numero primo é quando ele é divisivel por 1 e por ele mesmo e o 1 não se enquadra
+        for(let i = 2; i <= numero / 2; i++){
+            if( numero % i == 0){
+                temDivisor = 1;
+                break ;
+                //  todo numero é divisil por um, mas se esse mesmo numero for dividido por 2 e der resto zero, entao mudo o valor de temdividor
+            }  }
+            if((numero > 1) && (!temDivisor)){
+                outresultado.textContent = numero + "  primo" ;
+                // se o numero for maior q 1, pois o 1 não conta. e o if acima for verdade , então o temdivisor fica 1, sendo primo o numero...mais claro numero > 1..numero maior  1 ...!temdivisor...o padrao ta 0...temdivisor = 0 ..definido acima...mas como no if acima..se o numero for divisil por 2 ..entao tem divisor fica 1..sendo true...! ele inverte...
+            } else {
+                outresultado.textContent = numero + " nao e primo"
+            }
+    }
+    let verificar = document.getElementById('verificar')
+    verificar.addEventListener("click", primos);
+</script> 
+</html>

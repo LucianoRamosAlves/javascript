@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>tabuada</h1>
+    <div>
+      <span>numero:</span>
+      <input type="text" placeholder="digite um numero" id="innumero" />
+    </div>
+    <input type="button" value="mostrar tabuada" id="btabuada" />
+    <pre id="outresultado"></pre>
+  </body>
+  <script>
+    function tabuada() {
+      let innumero = document.getElementById("innumero").value;
+      let outresultado = document.getElementById("outresultado");
+      numero = parseFloat(innumero);
+      let resposta = "";
+      if((numero == 0) || isNaN(numero)){
+        alert("informe um numero valido");
+        innumero.focus();
+        return;
+      }
+      for (var i = 0; i <= 10; i++) {
+        resposta = `${resposta + numero} x ${i} = ${numero * i}${"\n"}`;
+      }
+      outresultado.innerHTML = resposta;
+    }
+    btabuada.addEventListener("click", tabuada);
+  </script>
+</html>

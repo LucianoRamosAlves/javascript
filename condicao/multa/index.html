@@ -21,7 +21,7 @@
         let outres = document.getElementById("outres");
         velper = parseFloat(invelper);
         velcond = parseFloat(invelcond);
-        let val20 = (((velper / 2) * 0.2) * 2) + velper
+        let val20 = velper * 0.2 + velper
         let total = velcond - velper
         if(velcond < velper){
             outres.innerHTML="dentro da normalidade"

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>fabrica de estrelas</h1>
+    <div>
+        <span>quantidades de simbolos:</span>
+        <input type="number" name="" id="inquantidades">
+    </div>
+    <input type="button" value="preencher" id="bpreencher">
+    <div id="outespaco"></div>
+</body>
+<script>
+    function preencher() {
+        let inquantidades = document.getElementById ("inquantidades").value;
+        let outespaco = document.getElementById("outespaco");
+        quantidades = parseFloat(inquantidades);
+        if((quantidades == 0) || (quantidades < 0)){
+            alert("digite um numero acima de zero")
+        }
+    let estrelas = ""; // crio um espaço para a respota ... um espaco ..para o for
+
+  for( let i = 1; i <= quantidades ; i++){
+        if( i % 2 == 1){ // todo mumero divido por 2 der resto 1 é impar
+            estrelas = estrelas + "*";
+            // lembrese que o espaco tem que receber ele mesmo e nesse caso fica na posiçao impares
+        }else{
+            estrelas = estrelas + "-"
+        }
+        outespaco.textContent = estrelas;
+    }}  
+    let bpreencher = document.getElementById("bpreencher");
+        bpreencher.addEventListener("click", preencher);
+
+</script>
+</html>
