@@ -32,8 +32,8 @@ let produtos = [ "arroz",  "feijão" ,"peixe" ,"macarrão"]; // listagem de prod
 
 for(let i = 0; i < produtos.length; i++) {
      //? console.log(produtos[i]); pecorro todos os intens da lista
-}
-
+} /*
+*/
 //! --------------função adicionar----------------------
 /* passos 
 1-- crio o vetor global, fica fora da função, ex: se minha pagina sobre carros então o global é : let carros = [];
@@ -51,17 +51,17 @@ tenho outro input  do preço, pego a referencia de entrada, carros.push({modelo:
 
 8-- pego a referencia de saida que vai receber essa reposta acima, que vai receber a lista e mostrar a lista
 
-9-- fora da função crio minha referncia de botão
+9-- fora da função crio minha referncia de botão */
 
-//! -----função atender/ vender------------------
+/*//! -----função atender/ vender------------------
 posso criar uma função vender, para pega um carro da lista, remove e exibe essa pessoa em uma referencia de saida 
 1-- faço a mesma coisa do intem a cima
 2-- valido com if se tem carros na lista, carros.length == 0
 3-- no item 5.. posso usar o atributo carros.shift().. mas .. let vendido = carros.shift().. pego o item removido e cologo na var vendidos
 4-- pego uma referencia de saida e exibo vendidos
-//? sõ aqui que muda o resto é igual 
+//? sõ aqui que muda o resto é igual */
 
-//! ------------function lista--------------
+/*//! ------------function lista--------------
 mesma coisa de adicionar,  só que vai listando na tela, aqui tem que ter 2 inputs de entreda , item 5
 1-- no final da função adicionar , coloco essa função, lista(), para que todas as vezes que eu chamar a função ativar, chame a função lista e mostre os intem listado na tela
 2-- seguimos a mesma logica
@@ -70,9 +70,9 @@ mesma coisa de adicionar,  só que vai listando na tela, aqui tem que ter 2 inpu
      lista += carros[i].modelo + " " + carros[i].preco.tofixed(2); "\n"
 }
 5-- pego uma referencia de saida para mostra essa lista
-6-- crio fora da funçao reference botão
+6-- crio fora da funçao reference botão*/
 
-//! ----------- function filtrar---------------
+/*//! ----------- function filtrar---------------
 1-- crio uma let ex; let maximo = number(prompt("qual valor maximo")), pode ser isso ou normal, pegando um imput de entrada.. epgando a referencia e depois igualar a let maximo
 2-- valida com if(maximo == 0 etc..)
 3-- uso um epsaco para concaternar
@@ -86,6 +86,35 @@ mesma coisa de adicionar,  só que vai listando na tela, aqui tem que ter 2 inpu
  outlista.textcontent = " carros até" + maximo.toFixed(2) + "\n-------------------------------\n" + lista 
 }
 8-- fora da funçao criei um botão referencia
+
+//!----------- function resumir----------
+1-- verifico se o vetor está vazio if( carros.length == 0){ nao há carros}
+2-- crio uma copia do vetor let copia = carros.slice()
+3-- posso ordenar por nome ou number, nesse caso number que é o preço copia.sort(function(a,b) { return a.preco - b.preco});
+4-- crio uma lista para concatener let resumo = ""
+5-- let aux = copia[0].preco como ele orgazina em ordem crescente o indice zero é o menor preço
+6--let modelos = []; para adcionar os modelos
+7-- pecorrer for(let i = 0; i <copia.length; i++){
+     if(copia[i].preco == aux){
+          modelos.push(copia[i].modelos);
+     }else{
+          resumo += aux + "modelos " + modelos.length + "carros"
+          resumo += (modelos.length / copia.length * 100) .tofixed(2) + "%\n";
+          resumo += "(" + modelos.join(",") + ") \n\n";
+          aux = copia[i].preco
+          modelos[]
+          modelos.push(copia[i].modelo)
+     }
+}
+resumo+= aux + "modelos" + modelos.length + " carros" 
+resumo += (modelos.length / copia.length * 100).tofixed(2) +  "%\n"
+resumo += "(" + modelos.join(",") + ")\n\n" 
+
+pega a referencia de saida e iguala a resumo
+fora da função botao
+
+
+*/
 
 
 
