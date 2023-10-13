@@ -1,0 +1,33 @@
+#outarray{
+    color: antiquewhite;
+    background-color: blue;
+    font-size: 1.3em;
+    padding: 20px;
+    text-align: center;
+}
+.pesquisa{
+background-color: coral;
+height: 200px;
+font-size: 1.4em;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+.pesquisa button{
+    padding: 10px;
+    border-radius: 2px;
+    background-color: rgb(255, 68, 0);
+    color: antiquewhite;
+
+}
+.pesquisa input{
+    padding: 10px;
+}
+#outres{
+    background-color: mediumseagreen;
+    padding: 30px;
+    margin-top: 10px;
+    border: 3px solid green;
+    color: antiquewhite;
+}

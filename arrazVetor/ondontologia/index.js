@@ -1,7 +1,7 @@
  let pacientes = []; //* crio vetor global
 function adicionar(){
     let inNomePaciente = document.getElementById("inNomePaciente").value;
-    let outlista = document.getElementById("outlista");
+    let outlista =document.getElementById("outlista");
     if((inNomePaciente == "") || (inNomePaciente >= 0)){
         alert("digite um nome valido");
         inNomePaciente.focus();
@@ -18,6 +18,7 @@ function adicionar(){
         //? i + 1 , soma 1 no i , ao inveis de comecer pelo indice 0, comeca por 1 
         */
     }
+    
     outlista.textContent = lista 
     inNomePaciente.value = ""
     inNomePaciente.focus();
