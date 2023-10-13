@@ -10,7 +10,6 @@ let elementos_array=["casa","lua","fita","mel","rei"];
 // passo os elementos para meu elemento de saida
 
 p_array.textContent = "[" + elementos_array + "]";
-lista = ""
 
 bpesquisar.addEventListener("click", (evt)=>{
     // pego o array uso find e pego seus elementos el
@@ -25,3 +24,25 @@ bpesquisar.addEventListener("click", (evt)=>{
     })
     
 })
+
+/*//!----- tem a variação disso 
+//* every...verifica de o array ssegue uma regra que eu especificar ex: se todos os numeros nao maior qure 18
+//* ao ives do eexemplo acima..trocar o campo pesquisar por verificar
+
+let elementos_array=[34,21,10];
+p_array.textContent = "[" + elementos_array + "]";
+bpesquisar.addEventListener("click", (evt)=>{
+   let ret =elementos_array.every((el , i)=>{
+        if(el < 18){
+            //* se tiver um numero menor de 18..nesse caso tem...o 10
+            res.textContent="array conforme na posição" + el 
+        }
+        return el>=18
+    })
+    if(ret){
+        res.innerHTML = ok
+        //* se todos os elementos for maior ...ok..se ficar [34,21,19]
+    }
+    
+})*/
+
