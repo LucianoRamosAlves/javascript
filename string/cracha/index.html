@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>grachar</h1>
+    <div>
+        <span>nome:</span>
+        <input type="text" id="innome">
+    </div>
+    <button id="bgerar"> gerar crachar</button>
+    <div id="outcrachar"></div>
+</body>
+<script>
+    function gerarCrachar(){
+        let innome = document.getElementById("innome");
+        let outcrachar = document.getElementById("outcrachar");
+        nome = innome.value
+
+        if(nome == "" || nome.indexOf(" ") == -1){ // ou a pesquisa me retornar sem espaco igualar a -1 que esse valor é quando o indexof é invalido
+            alert("digite um nome")
+            innome.focus();
+            return;
+        }
+        let primeiroEspaco = nome.indexOf(" "); // pesquisa pelo primeiro espaco pegando o primeiro nome
+        let ultimoEspaco = nome.lastIndexOf(" "); //pesquisa ultimo espaco pegando o ultimo nome
+
+        let crachar = nome.substr(0, primeiroEspaco) + nome.substr(ultimoEspaco);// faço uma copia para let crachar , uso substr como usei 0 pego todas as letras da let primeiroEspaco // já o ulimo não tem a posição pois não preciso limitar ele . pego todo o ultimo nome
+        outcrachar.innerHTML = crachar
+    }
+
+    bgerar.addEventListener("click",gerarCrachar)
+</script>
+</html>

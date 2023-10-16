@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>programa qual fruta</h1>
+    <div>
+        <span>Fruta:</span>
+        <input type="text" id="infrutas">
+        <input type="button" value="mostrar" id="bmostrar">
+    </div>
+    <div id="indica"></div>
+</body>
+<script>
+    function montarDica(){
+        let infrutas = document.getElementById("infrutas");
+        let dica = document.getElementById("indica");
+        fruta = infrutas.value;
+
+        if (fruta == ""){
+            alert("Please ! fruta invalid")
+            infrutas.focus()
+        }
+
+        let reposta = fruta.charAt(0)
+        let estrelas = "*"
+        let tam = fruta.length
+
+        for (let i = 1; i < tam; i++) {
+            if(fruta.charAt(i) == fruta.charAt(0)){
+                reposta += fruta.charAt(0)
+            }
+            else{
+                reposta += "_"
+            }
+            estrelas += "*" 
+        }
+        dica.textContent = reposta
+    infrutas.value = estrelas
+        
+    }
+    bmostrar.addEventListener("click",montarDica)
+</script>
+</html>

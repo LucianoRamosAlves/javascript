@@ -1,0 +1,1 @@
+//? u mesmo metodo ter ações diferenetes imagina uma classe pai com uma if e no filho tenho outra if com outra funcionalidade..posso ter varios contructores com propriedades diferenetes
