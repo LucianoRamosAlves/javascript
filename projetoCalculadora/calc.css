@@ -1,0 +1,121 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --color1:#F7DAD9;
+    --color2:#A5907E;
+    --color3:#786452;
+    --color4:#443730;
+    --color5:#550C18;
+    --color6:#000000;
+    --color7:#ffffff;
+    --font: 'Inconsolata', monospace;
+    --fontSize: 1.5em;
+}
+header{
+    padding: 20px;
+    background-color: var(--color7);
+    font-family: var(--font);
+    color: var(--color5);
+    font-size: var(--fontSize);
+    justify-content: space-between;
+    width: 100%;
+
+}
+.caixa_titulo{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+header h1{
+    letter-spacing: 0.3em;
+    font-style: italic;
+}
+.material-symbols-outlined{  
+    font-size: 1.2em;
+    animation: logo_animation 0.5s linear infinite alternate;
+}
+@keyframes logo_animation{
+    to{
+        opacity: 0%;
+    }
+}
+main{
+    background-color: var(--color4);
+    height: 62vh;
+    width: 40vh;
+    margin: auto;
+    border-radius: 10px;
+}
+#luz{
+    background-color: rgb(60, 255, 0);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    padding: 5px;
+    margin:auto;
+    animation: luz 5s infinite linear;
+}
+@keyframes luz {
+    to {
+        opacity: 0%;
+    }
+}
+.tela_display{
+    padding: 10px;
+}
+.display{
+   display: flex;
+   justify-content: center;
+   padding: 5px;
+   width: 100%;
+
+} 
+#telam{
+    color: #F7DAD9;
+}
+.display p{
+    padding: 10px;
+    background-color:var(--color6);
+    border-radius: 10px;
+    text-align: right;
+    font-size: var(--fontSize);
+    font-family: var(--font);
+    color: #F7DAD9;
+    height: 45px;
+    width: 100%;
+}
+.numeros{
+    display: flex;
+    position: relative;
+    height:50vh ;
+    flex-wrap: wrap;
+}
+.num,.operador,.limpar{
+    width: 24%;
+    height: 19%;
+    margin: 1px;
+    border-radius: 10px;
+    background-color: var(--color1);
+    color: var(--color4);
+    font-size: var(--fontSize);
+    font-family: var(--font + 1em);
+    font-weight: 600;
+    box-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+.num:hover{
+    color: var(--color5);
+    cursor: pointer;
+}
+.operador{
+    background-color: var(--color5) !important;
+    color: var(--color1) !important;
+}
+.operador:hover{
+    color: var(--color6) !important;
+}
+::placeholder{
+    color: #550C18;
+}
