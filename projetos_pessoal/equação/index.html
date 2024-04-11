@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>equação</title>
+    <style>
+        ::placeholder{
+         width: 100%;
+        }
+        body{
+            background: linear-gradient(45deg,#58355E,#7AE7C7,#D6FFB7,#FFF689);
+            background-repeat: no-repeat;
+        }
+        mark{
+            background-color: #ec0b4370;
+            font-size: 1.4em;
+        }
+        h1{
+            text-align: center;
+            padding: 10px;
+        }
+        h2{
+            text-align: center;
+            color:#EC0B43 ;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            align-items: center;
+        }
+        span{
+            font-size: 1.3em;
+        }
+        #res{
+            padding: 20px;
+            font-size: 1.3em;
+            background-color: aliceblue;
+            width: 70%;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+        #botao{
+            color: aliceblue;
+            background-color: #EC0B43;
+            font-size: 1.1em;
+        }
+        input{
+            padding: 10px;
+            margin: 10px;
+            width: 100px;
+            border-radius: 10px; 
+        }
+        footer{
+            background-color: black;
+            color: aliceblue;
+            font-size: 1.1em;
+            text-align: center;
+            padding: 20px;
+        }
+        strong{
+            color: #EC0B43;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Descubrar o valor de (y)</h1>
+        <h2> y=2x - n1 + n2 </h2>
+    </header>
+    <main>
+        <form action="">
+            <span> por favor, digite o valor de <mark>(x)</mark></span>
+            <input type="number" name="text1" id="text1" placeholder="digite um valor">
+            <span> por favor, digite o valor de <mark>n1</mark></span>
+            <input type="number" name="text2" id="text2" placeholder="digite um valor">
+            <span> por favor,digite o valor de <mark>n2</mark></span>
+            <input type="number" name="text3" id="text3" placeholder="digite um valor">
+
+            <input type="button" value="Resultado" name="botao" id="botao" onclick="equa()" >
+
+            <div id="res"> resultado</div>
+        </form>
+    </main>
+    <footer>
+        <p> versão beta, suportando somente esse tipo de equação</p>
+    </footer>
+</body>
+<script>
+    function equa() {
+        var xx= document.getElementById('text1')
+        var nn1 = document.getElementById('text2')
+        var nn2 = document.getElementById('text3')
+        var r = document.querySelector('div#res')
+        var x = Number(xx.value)
+        var n1 = Number(nn1.value)
+        var n2 = Number(nn2.value)
+        var t = 2*x - n1 + n2
+        r.innerHTML=` valor da equaçao <br><strong>${t}</strong>`
+    }
+
+</script>
+</html>
