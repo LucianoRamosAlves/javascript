@@ -1,0 +1,32 @@
+
+<body>
+    <h1>
+        conversor
+    </h1>
+    <script>
+        let num = parseFloat(prompt("digite uma medida em metros"));
+        let med = prompt("digite em qual unidade deseja converter milinetro (mm) centimetro (cm) decimetro(dm) decametro(dam) hectometro(hm) quilometro(km)");
+        // o nome do shitch tem que esta de acordo com o da let do caso, e cuidado com as aspas
+        switch (med){
+            case "mm":
+                 alert(" a medida em milimetros é" + num*1000);
+            break;
+            case "cm":
+            alert(" a medida em milimetros é" + num*100);  
+            break;
+            case "dm":
+            alert(" a medida em milimetros é" + num*10);  
+            break;
+            case "dam":
+            alert(" a medida em milimetros é" + num/10);  
+            break;
+            case "hm":
+            alert(" a medida em milimetros é" + num/100);  
+            break;
+            case "km":
+            alert(" a medida em milimetros é" + num/1000);  
+            break;
+            default: alert("invalid")
+        }
+    </script>
+</body>

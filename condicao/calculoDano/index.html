@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo Dano</title>
+</head>
+<body>
+    <h1>Calculo Dano</h1>
+    <script>
+       // let nomePoder =   prompt("insira o nome do poder");
+        let poderAtaque = parseFloat(prompt("insira o poder de ataque"));
+      //  let nomeP =   prompt("insira o nome do personagem");
+        let vida = parseFloat(prompt(" quantidade de vida "));
+        let poderDefesa = parseFloat(prompt("insira o poder de defesa"));
+        let escudo = confirm("possui escudo");
+        if(poderAtaque > poderDefesa && escudo === false ){
+            vida = poderAtaque - poderDefesa
+            alert(vida)
+        }else if(poderAtaque > poderDefesa && escudo === true ){
+             vida = vida - (poderAtaque - poderDefesa) / 2 
+             alert(vida)
+        } 
+    </script>
+</body>
+</html>
