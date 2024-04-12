@@ -5,6 +5,7 @@
 >
 <=
 ==
+=== //**  tem que ser igual restrito
 != diferente
 ! é uma negacão, ele inverte o resultado, se for true fica false
 */
