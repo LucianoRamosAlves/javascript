@@ -8,7 +8,6 @@ const botao =  document.querySelector("input#botao")
 //* então tenho que pegar todos
 
 //? criei uma classe só para os selecionados
-
 const todasCores = [...document.querySelectorAll('#caixa1 > div')]
 //* transformei em array
 
