@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  #gameBoard {
+    background-color: #232323;
+    display: grid;
+    grid-template-columns: 6rem 6rem 6rem;
+    grid-template-rows: 6rem 6rem 6rem;
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+    max-width: 19rem; /* 3x6rem do templade*/
+  }
+  
+  #gameBoard span {
+    background-color: #ddd;
+    display: grid;
+    place-content: center;
+    font-size: 5rem;
+    /* grid mais o place content center, centraliza automaticamente os elementos dentro */
+  }
+  
+  #gameBoard span.win {
+    background-color: #25a340;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
