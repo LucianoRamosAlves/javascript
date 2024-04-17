@@ -1,5 +1,9 @@
+import calculate from "./function-calculate.js"
+import copy from "./copy.js"
+import trocar from "./trocar-tema.js";
+
 //@ pego os elementos que vou usar
-const main = document.querySelector("main")
+//* const main = document.querySelector("main"); foi exportado, uma dica de depencia é que fica apagado
 const root = document.querySelector(":root")
 const input = document.getElementById("input")
 const resultInput = document.getElementById("result")
@@ -39,16 +43,20 @@ input.addEventListener("keydown", function (ev) {
 
 document.getElementById("equal").addEventListener("click", calculate) //* botão de igual, passei a function click e calcular
 
-function calculate() {
+//@ função exportada
+/*function calculate() {
   resultInput.value = "ERROR" //* tratar error do  eval , todas vez que a função calcukate for chamada a primeira coisa que ela vai fazer é chamar que ERRO, escrever erro no resultado da calculadora
   resultInput.classList.add("error") //* class estilização erro
   const result = eval(input.value) //* executa o codigo,pega o numero do input e analisa, não é preciso criar cada função a botao se soma, dividir etc.. mas essa aplicação é perigosa, pois da brecha dde segurança
   resultInput.value = result
   resultInput.classList.remove("error") //* se o codigo acima funcionar ou seja o val não tiver problemas, ele segue o codigo e chega até aqui e remove o erro deixando o resultado , se nao funcionar ele não chega aqui e não removesse essa class e aparece erro estilizado la no input. 
   //! mas essa não é forma correta de tratar errro, futuramente irá aprender
-}
+}*/
 
-document.getElementById("copyToClipboard").addEventListener("click", function (ev) {
+
+//@ função exportada
+document.getElementById("copyToClipboard").addEventListener("click", copy)  //@ função exportada , veja que peguei dentro do paramentro tava addEventListener("click", function(ev){função em si}) peguei essse funcion, exportei ela
+/*function (ev) {
   const button = ev.currentTarget //* pego nosso botão
   if (button.innerText === "Copy") { //* se o nome tiver la for copy então significa que não foi copiado
     button.innerText = "Copied!"
@@ -58,10 +66,10 @@ document.getElementById("copyToClipboard").addEventListener("click", function (e
     button.innerText = "Copy"
     button.classList.remove("success")
   }
-})
+})*/
 
-document.getElementById("themeSwitcher").addEventListener("click", function () {
-  if (main.dataset.theme === "dark") {
+document.getElementById("themeSwitcher").addEventListener("click", trocar);
+  /*if (main.dataset.theme === "dark") {
     //* peguei esse root la em cima
     root.style.setProperty("--bg-color", "#f1f5f9") //* setProperty é pra eu acessar uma propiedade
     root.style.setProperty("--border-color", "#aaa")
@@ -75,4 +83,4 @@ document.getElementById("themeSwitcher").addEventListener("click", function () {
     root.style.setProperty("--primary-color", "#4dff91")
     main.dataset.theme = "dark"
   }
-})
+})*/

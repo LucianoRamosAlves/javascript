@@ -1,6 +1,8 @@
 //* modulo é uma forma de organizar um codigo,  imagina uma unica pasta index.js com centenas de funções, eu crio um modulo , um grupo de função que faz a mesma coisa e coloco em outra pasta, assim fica mais facil a manutenção, codigo mais limpo
 //* imagine um supermercado com setores, setor de frutas, higiene, frios etc.. todos fazem parte do supermercado , mas estão separados por função
 
+//! lembrar no html,  no script colocar type = "modulo"
+
 import { input, label } from "./export"
 
 
