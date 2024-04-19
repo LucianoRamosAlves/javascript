@@ -3,6 +3,7 @@
 //* pra intalar npm 
 //* baixa os modules
 
+const dayjs = require('dayjs');
 const lodash = require('lodash');
 
 console.log(lodash.isArray([])) //* esse module verifica se é array , como tem [] então ele retorna true
@@ -20,3 +21,5 @@ console.log(lodash.kebabCase("Luciano Ramos Alves")) //*separa por tracços o no
 //| trabalhamos com string number boolean e nul
 //| usu virgula pra separar as propriedades
 //| é usado para troca de dados em diferentes sistemas com linguaguem diferente
+
+console.log( dayjs().minute())
