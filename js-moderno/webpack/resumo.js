@@ -20,3 +20,8 @@
 //* veja, se eu for na pasta html no dist, mesmo depoois de apagar o module dayjs o script funciona
 
 //! então é só colocar o main empacotado junto com a nossa aplicação, pagina html , rtcc, ele vai rodar sem as depencias ou outros arquivos, pega tudo que precisa 
+
+//@ para pacotar css também , tem que usar os loader, npm i -D style-loader css-loader
+//@ se quieser usar outro loader, ler na documentação
+//@ ai depois, vai em webpack.config.js, ver as configuração
+//@ depois, lembra que tem um ponto de entrada, que é o arquivo .js , vai lá e importa o css

@@ -3,7 +3,7 @@
 //!------------------------------------------------------------
 
 //* configuração do webpack
-const path = require('path') //* modele oara trabalhar com caminhos,
+/*const path = require('path') //* modele oara trabalhar com caminhos,
 
 module.exports = {
   entry: { //* entrada, lugares que ele vai procurar
@@ -15,4 +15,22 @@ module.exports = {
     filename: '[name].min.js' //| tem que assim, caso tinha mais de 1 arquivo de entrada
   },
   mode: 'development'
+}
+*/
+
+//? para pacotar css
+
+const path = require('path')
+
+module.exports = {
+  entry: {
+    index: './src/index.js'
+  },
+  mode: 'development',
+  module: { 
+    rules: [{ 
+      test: /\.css$/, //* qual arquivos vai aplicar o loader, testa todos os arquivos que termina em .css
+      use: ['style-loader', 'css-loader']
+    }]
+  }
 }
