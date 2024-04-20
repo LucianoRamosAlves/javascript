@@ -1,0 +1,15 @@
+primeiro.. eu começo com npm init -y , para ter o package.json
+
+segundo crio minha pasta src , aonde vai ter todos meus arquivos e dentro crio uma pasta style
+
+terceiro ,  crio meu index.js dentro da pasta src e importo meu css
+
+4 --  npm i -D webpack webpack-cli @babel/core @babel/preset-env style-loader css-loader babel-loader, tem que instalar essas depedências
+
+5-- configurar o babel , ver arquivo babel.config
+
+6-- configurar o webpack
+7-- esse é opcional, mas é bom. criar um script , para o comando webpack, para não ter que digitar
+só digite npm run build
+
+8-- crio meu html na pasta dist criada, lembfando que nessa pasta vai esta meu arquivo compactado, ai só integro meu html com o script compactado
