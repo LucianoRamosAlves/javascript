@@ -9,7 +9,7 @@ class Post {
     this.createdAt = new Date() //* data que foi criado o poste
   }
 
-  addComment(username, content) { //* comentario no poste
+  addComment(username, content) { //* comentario no post
     this.comments.push(new Comment(username, content))
   }
 }
