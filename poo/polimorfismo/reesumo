@@ -1,0 +1,5 @@
+um objeto pode assumir diferentes formas, um objeto tem uns metodos que se comporta diferestew
+um mesmo objeto, com metodos diferentes
+ex; tenho um objeto ou class com o metodo mov()
+class, carros, bike, moto, são filho e todos pega o metodo mov()
+mas cada um vai ter seu metodo mov() diferentes
