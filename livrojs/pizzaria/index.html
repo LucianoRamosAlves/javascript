@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let ValorTotal = Number(prompt("Valor Total:"));
+    let QtdPessoas = Number(prompt("Quantidades de Pessoas:"));
+    const ValorUnitario = ValorTotal /  QtdPessoas;
+    if( ValorTotal == "" || QtdPessoas == "" || QtdPessoas <= 0 || isNaN(ValorTotal) || isNaN(QtdPessoas)){
+        alert("OPSS, Uma Das Opção foi Digitado Errado , Por Favor Verificar.")
+    } else{
+        alert(` Cada pessoa pagará : ${ValorUnitario.toFixed(2)} R$`);
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // desafio, colocar um case, se o cliente optar por a vista ou parcelado, verificar com if
+        let precoTotal = Number(prompt("Valor Total Da Comprar :"))
+        const PrecoDescont =  precoTotal - precoTotal * 0.10 ;
+        const PrecoParcel = precoTotal / 3;
+        alert(` O valor A Vista Com 10% De Desconto:R$: ${PrecoDescont} 
+                O Valor Parcelado Em 3x: R$: ${PrecoParcel.toFixed(2)}`)
+    </script>
+</body>
+</html>
