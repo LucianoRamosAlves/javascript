@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //* desafio 01, coloque um metodo que calcule o troco a ser recebido pelo cliente, melhore com um if, se for um , etc. limite para precos absurdos.
+
+        //* pego os dados de entrada
+        let ValorJantar = prompt("Digite o Valor Do Jantar");
+
+        //* faço os processamentos
+        const PorcentGarcom = ValorJantar * 0.1;
+        let ValorTotal = Number(ValorJantar) + PorcentGarcom ;
+
+        if( ValorJantar == ""){
+            alert("Por favor, Verifique as informaçãoes e certifique que estão corretas")
+        } else{
+            //* exibo os resultados
+        alert(` O valor do Jantar foi: ${ValorJantar} R$
+                Comissão do Garcom: ${PorcentGarcom} R$
+                Valor Total a ser Pago: ${ValorTotal} R$`);
+        }
+    </script>
+</body>
+</html>
