@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> cine</h1>
+    <form  id="form">
+        <label for="">digite o nome do filme:</label>
+        <input type="text" name="" id="Nfilme">
+        <br>
+        <label for="">digite a duração do filme:</label>
+        <input type="number" name="" id="duração">
+        <br>
+        <input type="submit" value="verificar" id="verificar">
+        <h2 id="res"></h2>
+    </form>
+    <script>
+        form.addEventListener("submit",(e)=> {
+            let Nfilme = document.getElementById("form").Nfilme.value;
+            let duracao = document.getElementById("form").duração.value;
+            let res = document.getElementById("res");
+
+            let duraçãoHoras = Math.floor(duracao / 60)
+            let duraçãoMinutos = duracao % 60
+
+            res.innerText = `A duração do filme:${Nfilme}
+                            horas ${duraçãoHoras}
+                            minutos ${duraçãoMinutos}`
+                            e.preventDefault();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>veiculo</h1>
+    <form  id="form">
+        <label for="">digite o nome do veiculo:</label>
+        <input type="text" name="" id="Nveiculo">
+        <br>
+        <label for="">digite o valor do veiculo:</label>
+        <input type="number" name="" id="valor">
+        <br>
+        <input type="submit" value="verificar" id="verificar">
+        <h2 id="outnome"></h2>
+        <h2 id="outvalor"></h2>
+        <h2 id="outparcil"></h2>
+    </form>
+    <script>
+        form.addEventListener("submit",(e)=>{
+        let veiculo = document.getElementById("Nveiculo").value;
+        let valor = document.getElementById("valor").value;
+        let outnome = document.getElementById("outnome");
+        let outvalor = document.getElementById("outvalor");
+        let outparcil = document.getElementById("outparcil");
+        let metade =  valor * 0.5
+        let parcil = (metade / 12).toFixed(2)
+            outnome.innerText = ` nome do veiculo ${veiculo}`
+            outvalor.innerText = ` valor ${valor} com estrada de ${metade}`
+            outparcil.innerText = ` 12 vezes de ${parcil}`
+            e.preventDefault() 
+        })
+    </script>
+</body>
+</html>
