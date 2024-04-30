@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>farmacia</h1>
+    <form action="" id="form">
+        <div>
+            <label for="">medicamentos:</label>
+            <input type="text" id="inmed">
+        </div>
+        <div>
+            <label for="">preco R$:</label>
+            <input type="number" id="inpreco" step="0.010">
+        </div>
+        <div>
+            <input type="submit" value="Mostrar Promoção">
+    </form>
+    <div id="outmed"></div>
+    <div id="outpromo"></div>
+    <script>
+
+
+
+        //* saida
+        form.addEventListener("submit", (e) => {
+
+        const form = document.querySelector("form");
+        let med = document.getElementById("form").inmed.value;
+        let inpreco = document.getElementById("form").inpreco.value;
+        let outmed = document.getElementById("outmed");
+        let outpromo = document.getElementById("outpromo");
+
+        // processamnetos
+        preco = Math.floor(inpreco) * 2;
+        ValDscont = ((inpreco *  2 ) - preco).toFixed(2);
+
+        outmed.innerText = ` promocçao de ${med}`
+
+        // desafio - colocar  if centavo e real, se for um numero decimal, centavos 
+        if(ValDscont > 0){
+            outpromo.innerText = ` leve 2 por apenas R$: ${preco} deconto de R$: ${ValDscont} reais`
+        } else if(ValDscont == 1.00){
+            outpromo.innerText = ` leve 2 por apenas R$: ${preco} deconto de R$: ${ValDscont} real`
+        } else{
+            outpromo.innerText = ` leve 2 por apenas R$: ${preco} deconto de R$: ${ValDscont} centavos`
+        }
+        e.preventDefault()
+        })
+    </script>
+</body>
+</html>
