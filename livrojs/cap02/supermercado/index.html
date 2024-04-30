@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>supermercado</h1>
+    <form  id="form">
+        <div>
+            <label for="">produto:</label>
+            <input type="text" id="inprod">
+        </div>
+        <div>
+            <label for="">preco R$:</label>
+            <input type="number" id="inpreco">
+        </div>
+        <div>
+            <input type="submit" value="Mostrar Promoção">
+        </div>
+    </form>
+    <div id="outprod"></div>
+    <div id="outpromo"></div>
+
+    <script>
+        const frm = document.querySelector("form");
+        const outprod = document.getElementById("outprod");
+        const outpromo = document.getElementById("outpromo");
+        frm.addEventListener("submit",(em) => {
+        let produt = (frm.inprod.value);
+        let inpreco = (frm.inpreco.value);
+        
+        let preco =(inpreco * 2) + metadePreco
+        let metadePreco = inpreco * 0.50
+
+        outprod.innerText = ` - promoção: leve 3 por R$:`
+        outpromo.innerText = ` o 3º produto custa apenas R$:`
+        em.preventDefault()
+        })
+        </script>
+</body>
+</html>
