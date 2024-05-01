@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>lan house</h1>
+    <form action="" id="frm">
+        <div>
+            <label for="">valor por 15 min de uso:</label>
+            <input type="number" name="" id="invalor" step="0.1">
+        </div>
+        <div>
+            <label for="">tempo uso do cliente</label>
+            <input type="number" name="" id="intempo">
+        </div>
+        <div>
+            <input type="submit" value="calcular valor a ser pago">
+        </div>
+    </form>
+    <h2 id="outvalor"></h2>
+    <script>
+        const frm = document.querySelector("form");
+        const outvalor = document.getElementById("outvalor");
+
+        frm.addEventListener("submit", (e)=>{
+            e.preventDefault();
+
+            let valorPorUso = frm.invalor.value;
+            let tempoDeUso = frm.intempo.value;
+
+            let total = Math.ceil(tempoDeUso/15)
+            let pagar = total * valorPorUso
+
+            outvalor.textContent = `Valor a Pagar R$: ${pagar}`
+        })
+    </script>
+</body>
+</html>
