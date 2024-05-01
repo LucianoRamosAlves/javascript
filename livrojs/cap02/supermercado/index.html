@@ -10,33 +10,34 @@
     <form  id="form">
         <div>
             <label for="">produto:</label>
-            <input type="text" id="inprod">
+            <input type="text" id="iprod">
         </div>
         <div>
             <label for="">preco R$:</label>
-            <input type="number" id="inpreco">
+            <input type="text" id="inpreco">
         </div>
         <div>
             <input type="submit" value="Mostrar Promoção">
         </div>
     </form>
-    <div id="outprod"></div>
-    <div id="outpromo"></div>
+    <div id="outprod"> </div>
+    <div id="outpromo"> </div>
 
     <script>
         const frm = document.querySelector("form");
         const outprod = document.getElementById("outprod");
         const outpromo = document.getElementById("outpromo");
-        frm.addEventListener("submit",(em) => {
-        let produt = (frm.inprod.value);
-        let inpreco = (frm.inpreco.value);
         
-        let preco =(inpreco * 2) + metadePreco
+        frm.addEventListener("submit",(e) => {
+            e.preventDefault()
+        const produt = frm.iprod.value;
+        const inpreco = frm.inpreco.value; 
+        
         let metadePreco = inpreco * 0.50
+        let preco =(inpreco * 2) + metadePreco
 
-        outprod.innerText = ` - promoção: leve 3 por R$:`
-        outpromo.innerText = ` o 3º produto custa apenas R$:`
-        em.preventDefault()
+        outprod.innerText = ` - promoção de ${produt}: leve 3 por R$: ${preco}`
+        outpromo.innerText = ` o 3º produto custa apenas R$:${metadePreco}`
         })
         </script>
 </body>
