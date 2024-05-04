@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form action="">
+    <div>
+        <label for="">nome</label>
+        <input type="text" id="innome" required>
+    </div>
+    <div>
+        <p> sexo</p>
+        <label for="inmasc">masculino</label>
+        <input type="radio" name="sexo" id="inmasc">
+        <label for="infem">feminino</label>
+        <input type="radio" name="sexo" id="infem">
+    </div>
+    <div>
+        <label for="">altura</label>
+        <input type="number" min="0" step="0.01" required id="inaltura">
+    </div>
+    <input type="submit" value="ver">
+    <input type="reset" value="apagar">
+    <h3></h3>
+  </form> 
+  <script>
+    const frm = document.querySelector("form");
+    const res = document.querySelector("h3");
+
+/* MELHORE ISSO*/    frm.addEventListener("submit", (e)=>{
+        e.preventDefault();
+    let nome = frm.innome.value;
+    let altura = frm.inaltura.value;
+    let masc = frm.inmasc.checked;
+
+    let peso
+    if(masc){
+        peso =  22 * Math.pow(altura , 2)
+    } else{
+        peso =  21 * Math.pow(altura , 2)
+    }
+
+    res.innerText = ` olá ${nome}seu peso é ${peso} kg`
+    })
+
+    frm.addEventListener("reset" , ()=>{
+        res.innerText = ""
+    })
+  </script> 
+</body>
+</html>
