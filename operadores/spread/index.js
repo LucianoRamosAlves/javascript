@@ -41,17 +41,28 @@ let n5 = [...n2,...n3]
 //* copiei os valores de n2 e n3 para n5
 console.log(n5)
 
-const jogador1= { nome:"pedro", idade:"28"}
+const jogador1= { nome:"pedro", idade:"28", peso:"34"}
 const jogador2= { nome:"atur", idade:"21"}
-const jogador3= { ...jogador1,...jogador2}
+const jogador3= { ...jogador1,...jogador2} //* conctena tambem, pega tudo de jogador1 e 2, junto tudo no 3
 console.log(jogador3)
 //* como idade tem nos 2, ele aparece o ultimo
 
 //! posso transformar os elementos html para um array
 //* tenho mais opção com isso
-const objeto1 = document.getElementById("id") //* normal
+//* no google , console
+/*const objeto1 = document.getElementById("id") //* normal
 const objeto2 = [...document.getElementById("id")] //* modo array
 
 objeto1.ATTRIBUTE_NODE
-objeto2.filter // aperte ctrl + space e veja quantos atributos eu tenho
+objeto2.filter // aperte ctrl + space e veja quantos atributos eu tenho posso ainda percorrer e mudar o text,cor, etc.. obs, o foreach só pega nesses tipos de documento*/
 
+
+//@ outra vantagem
+
+const soma = (v1,v2,v3,v4)=>{
+    return v1 + v2 + v3 + v4
+}
+
+let valores = [1,6,9,5]
+
+console.log(soma(...valores)) //? espalhei os valores, posso passar quanots valores no  let valores

@@ -1,11 +1,11 @@
 function carregar(){
-    var titulo = document.querySelector('h1.titulo')
-    var frase = document.querySelector('div.frase')
-    var img = document.querySelector('img.imagem')
-    var horas = document.querySelector('div.horas')
-    var data = new Date()
-    var hora =data.getHours()
-    var minuto = data.getMinutes()
+    let titulo = document.querySelector('h1.titulo')
+    let frase = document.querySelector('div.frase')
+    let img = document.querySelector('img.imagem')
+    let horas = document.querySelector('div.horas')
+    let data = new Date()
+    let hora =data.getHours()
+    let minuto = data.getMinutes()
     horas.innerHTML=`${hora}:${minuto}`
     if(hora >=6 && hora<12){
         titulo.innerHTML='olá, Bom Dia'
@@ -31,3 +31,4 @@ function carregar(){
     }
 
 }
+carregar()
