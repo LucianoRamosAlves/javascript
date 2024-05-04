@@ -4,7 +4,7 @@
 
 let opcao = ""; //* para conctenar
 
-do {
+do { //* veja que executa isso uma vez
     opcao = prompt(
       "Seja bem-vindo(a)!\n" +
       "\nEscolha uma das opções abaixo:" +

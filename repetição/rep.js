@@ -6,6 +6,15 @@ while( v < 6){//enquanto 6 for menor que 6 execute, ver se é vdd
    console.log('bom dia')
    v++//s0me mais 1 na var v 
 }
+
+//* outro ex é um numero fatorial, 
+let n = 5
+let fat = 1
+
+while(n >= 1){
+    fat*=n // fat = fat * n
+    n--
+}
 /*
 --------ou-------
 mesma logica
